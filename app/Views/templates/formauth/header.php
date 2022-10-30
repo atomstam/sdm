@@ -41,15 +41,9 @@ $request = service('request');
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/img/icon/favicon-16x16.png">
     <meta name="msapplication-TileImage" content="<?= base_url() ?>/img/icon/ms-icon-144x144.png">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>/formlogin/fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>/formlogin/css/owl.carousel.min.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= base_url(); ?>/formlogin/css/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="<?= base_url(); ?>/formlogin/css/style.css">
+    <link href="<?= base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
 
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">

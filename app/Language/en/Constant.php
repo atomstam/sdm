@@ -4,6 +4,7 @@
 return [
     'webTitle_full'    => 'ระบบบริหารจัดการเวรรักษาความปลอดภัย',
     'webTitle_short'      => 'SDM',
+    'webTitle_eng'      => 'Security Duty Management System',
     'webVersion' => '1.0',
     'webAuth_School' => 'โรงเรียนชื่นชมพิทยาคาร',
     'webAuth_Area' => 'สพม.มหาสารคาม',

@@ -43,14 +43,15 @@ $routes->group("", ["filter" => "alreadyLoggedin"], function ($routes) {
     $routes->get('/register', 'Register::index');
 });
 
-$routes->get('/', 'Pages::index');
-$routes->get('/item9_detail/(:any)/(:any)/(:any)', 'Pages::Item9_detail/$1/$2/$3');
-$routes->get('/item10_detail/(:any)/(:any)/(:any)', 'Pages::Item10_detail/$1/$2/$3');
-$routes->get('/complaint', 'Pages::Complaint');
-$routes->post('/saveComm', 'Pages::SaveComm');
-$routes->get('/chat', 'Pages::Chat');
-$routes->post('/saveChat', 'Pages::SaveChat');
-$routes->get('/ajax_chat', 'Pages::Ajax_Chat');
+//$routes->get('/', 'Pages::index');
+$routes->get('/', 'Login::index');
+//$routes->get('/item9_detail/(:any)/(:any)/(:any)', 'Pages::Item9_detail/$1/$2/$3');
+//$routes->get('/item10_detail/(:any)/(:any)/(:any)', 'Pages::Item10_detail/$1/$2/$3');
+//$routes->get('/complaint', 'Pages::Complaint');
+//$routes->post('/saveComm', 'Pages::SaveComm');
+//$routes->get('/chat', 'Pages::Chat');
+//$routes->post('/saveChat', 'Pages::SaveChat');
+//$routes->get('/ajax_chat', 'Pages::Ajax_Chat');
 
 $routes->get('/users', 'Users::index');
 
@@ -70,6 +71,7 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 
 //Item
+require APPPATH . 'Router/routes_events.php';
 require APPPATH . 'Router/routes_item.php';
 require APPPATH . 'Router/routes_itemcat.php';
 require APPPATH . 'Router/routes_itemmain.php';
