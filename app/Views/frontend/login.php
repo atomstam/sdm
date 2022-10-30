@@ -38,7 +38,7 @@
                   <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>--> 
                 </div>
 
-                <input type="submit" value="Log In" class="btn btn-block btn-info">
+                <input type="submit" value="เข้าระบบ" class="btn btn-block btn-info">
 
               </form>
             </div>
