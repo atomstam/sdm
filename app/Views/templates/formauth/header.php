@@ -9,7 +9,7 @@ $request = service('request');
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="School Lunch Digital Learning : SLDL" name="SLDL สพฐ.">
+    <meta content="<?php echo lang('Constant.webTitle_full');?> : <?php echo lang('Constant.webTitle_short');?>" name="<?php echo lang('Constant.webTitle_full');?>">
     <meta name="keywords" content="ita , ITA" />
     <!-- Title -->
     <title>
@@ -22,7 +22,7 @@ $request = service('request');
             echo $title[1];
         endif;
         ?>
-        : ITA </title>
+        : <?php echo lang('Constant.webTitle_short');?> </title>
     <!-- Favicon -->
     <link rel="icon" href="<?= base_url(); ?>/img/icon/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/img/icon/favicon.ico" />

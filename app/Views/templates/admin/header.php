@@ -8,21 +8,20 @@
 		<meta charset="UTF-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="ITA" name="description">
-		<meta content="Spruko Technologies Private Limited" name="author">
-		<meta name="keywords" content="ITA"/>
+		<meta content="<?php echo lang('Constant.webTitle_full');?> : <?php echo lang('Constant.webTitle_short');?>" name="<?php echo lang('Constant.webTitle_full');?>">
+		<meta name="keywords" content="ita , ITA" />
 		<!-- Title -->
 		<title>
-			<?php
-			if (!empty($title[3])) :
-				echo $title[3];
-			elseif (!empty($title[2])) :
-				echo $title[2];
-			else :
-				echo $title[1];
-			endif;
-			?>
-			: ITA</title>
+        <?php
+        if (!empty($title[3])) :
+            echo $title[3];
+        elseif (!empty($title[2])) :
+            echo $title[2];
+        else :
+            echo $title[1];
+        endif;
+        ?>
+        : <?php echo lang('Constant.webTitle_short');?> </title>
 			<!-- Favicon -->
 		<link rel="icon" href="<?= base_url(); ?>/img/icon/favicon.ico" type="image/x-icon"/>
 		<link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/img/icon/favicon.ico" />

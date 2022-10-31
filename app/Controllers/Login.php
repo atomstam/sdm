@@ -9,7 +9,7 @@ class Login extends Controller {
         helper(['form']);
         $data = [
             'title' => [
-                '1' => 'เข้าสู่ระบบ'
+                '1' => 'เข้าระบบ'
             ]
         ];
         echo view('frontend/login', $data);
