@@ -75,53 +75,58 @@
 							</span>
 							<h4 class="text-section">จัดการระบบ</h4>
 						</li>-->
-						<li class="nav-item <?php if($uri_two=='admin' and $uri_tree=='item9' or ($uri_six>0 and $uri_six<34)): echo "active"; endif;?>">
+						<li class="nav-item <?php if($uri_two=='admin' and $uri_tree=='note_evnt' ): echo "active"; endif;?>">
 							<a data-toggle="collapse" href="#O9" class="collapsed" aria-expanded="false">
 								<i class="fas fa-edit"></i>
 								<p>บันทึกการปฏิบัติ</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?php if($uri_two=='admin' and $uri_tree=='item9' or ($uri_six>0 and $uri_six<34)): echo "show"; endif;?>" id="O9">
+							<div class="collapse <?php if($uri_two=='admin' and $uri_tree=='note_evnt' ): echo "show"; endif;?>" id="O9">
 								<ul class="nav nav-collapse">
-									<li class="<?php if($uri_two=='admin' and $uri_tree=='item9' and $uri_four=='1' and $uri_five=='1' or ($uri_six >0 and $uri_six<10) ): echo "active"; endif;?>">
-										<a href="<?=base_url('admin/item9/1/1')?>">
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='note_evnt' and $uri_four=='1' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/note_evnt/1')?>">
 											<span class="sub-item">ครูเวร</span>
 										</a>
 									</li>
-									<li class="<?php if($uri_two=='admin' and $uri_tree=='item9' and $uri_four=='1' and $uri_five=='2' or ($uri_six >9 and $uri_six<18) ): echo "active"; endif;?>">
-										<a href="<?=base_url('admin/item9/1/2')?>">
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='note_evnt' and $uri_four=='2' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/note_evnt/2')?>">
 											<span class="sub-item">ภารโรงเวร</span>
 										</a>
 									</li>
-									<li class="<?php if($uri_two=='admin' and $uri_tree=='item9' and $uri_four=='1' and $uri_five=='2' or ($uri_six >9 and $uri_six<18) ): echo "active"; endif;?>">
-										<a href="<?=base_url('admin/item9/1/2')?>">
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='note_evnt' and $uri_four=='3' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/note_evnt/3')?>">
 											<span class="sub-item">ผู้ตรวจเวร</span>
 										</a>
 									</li>
-									<li class="<?php if($uri_two=='admin' and $uri_tree=='item9' and $uri_four=='1' and $uri_five=='2' or ($uri_six >9 and $uri_six<18) ): echo "active"; endif;?>">
-										<a href="<?=base_url('admin/item9/1/2')?>">
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='note_evnt' and $uri_four=='4' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/note_evnt/4')?>">
 											<span class="sub-item">ผอ./ผู้ได้รับมอบหมาย</span>
 										</a>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="nav-item <?php if($uri_two=='admin' and $uri_tree=='item10' or ($uri_six>33 and $uri_six<44)): echo "active"; endif;?>">
+						<li class="nav-item <?php if($uri_two=='admin' and $uri_tree=='info_evnt'): echo "active"; endif;?>">
 							<a data-toggle="collapse" href="#O10" class="collapsed" aria-expanded="false">
 								<i class="fas fa-line-chart"></i>
 								<p>สารสนเทศ</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?php if($uri_two=='admin' and $uri_tree=='item10' or ($uri_six>33 and $uri_six<44)): echo "show"; endif;?>" id="O10">
+							<div class="collapse <?php if($uri_two=='admin' and $uri_tree=='info_evnt'): echo "show"; endif;?>" id="O10">
 								<ul class="nav nav-collapse">
-									<li class="<?php if($uri_two=='admin' and $uri_tree=='item10' and $uri_four=='2' and $uri_five=='1' or ($uri_six >33 and $uri_six<42) ): echo "active"; endif;?>">
-										<a href="<?=base_url('admin/item10/2/1')?>">
-											<span class="sub-item">ตามเวร</span>
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='info_evnt' and $uri_four=='1' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/info_evnt/1')?>">
+											<span class="sub-item">ครูเวรกลางวัน</span>
 										</a>
 									</li>
-									<li class="<?php if($uri_two=='admin' and $uri_tree=='item10' and $uri_four=='2' and $uri_five=='2' or ($uri_six >41 and $uri_six<44) ): echo "active"; endif;?>">
-										<a href="<?=base_url('admin/item10/2/2')?>">
-											<span class="sub-item">ตามวัน</span>
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='info_evnt' and $uri_four=='2' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/info_evnt/2')?>">
+											<span class="sub-item">ครูเวรกลางคืน</span>
+										</a>
+									</li>
+									<li class="<?php if($uri_two=='admin' and $uri_tree=='info_evnt' and $uri_four=='3' ): echo "active"; endif;?>">
+										<a href="<?=base_url('admin/info_evnt/2')?>">
+											<span class="sub-item">นักการฯเวร</span>
 										</a>
 									</li>
 								</ul>
@@ -133,8 +138,8 @@
 							</span>
 							<h4 class="text-section">ข้อมูลส่วตัว</h4>
 						</li>-->
-						<li class="nav-item <?php if($uri_two=='admin' and $uri_tree=='profile' ): echo "active"; endif;?>">
-							<a  href="<?= base_url(session()->get('role').'/profile')?>">
+						<li class="nav-item <?php if($uri_two=='admin' and $uri_tree=='print' ): echo "active"; endif;?>">
+							<a  href="<?= base_url(session()->get('role').'/print')?>">
 								<i class="fas fa-print"></i>
 								<p>พิมพ์ผลการปฏิบัติ</p>
 							</a>

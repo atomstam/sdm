@@ -72,13 +72,16 @@ $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 
 //Item
 require APPPATH . 'Router/routes_events.php';
+require APPPATH . 'Router/routes_eventscate.php';
+require APPPATH . 'Router/routes_eventstype.php';
 require APPPATH . 'Router/routes_item.php';
 require APPPATH . 'Router/routes_itemcat.php';
 require APPPATH . 'Router/routes_itemmain.php';
 require APPPATH . 'Router/routes_itemsub.php';
 require APPPATH . 'Router/routes_itemup.php';
 
-$routes->get('(:any)', 'Pages::view/$1');
+//$routes->get('(:any)', 'Pages::view/$1');
+$routes->get(':any', 'Login::index');
 
 //CkEditor Upload Image
 $routes->post('/uploadimg', 'CkUploadImgController::store');

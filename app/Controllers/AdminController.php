@@ -12,6 +12,9 @@ use App\Models\ItemcatModel;
 use App\Models\ItemmainModel;
 use App\Models\ItemsubModel;
 use App\Models\ItemupModel;
+use App\Models\EventsModel;
+use App\Models\EventscateModel;
+use App\Models\EventstypeModel;
 
 use CodeIgniter\Controller;
 use CodeIgniter\Files\File;
@@ -36,6 +39,9 @@ class AdminController extends Controller
         $ItemsmainModel = new ItemmainModel;
         $ItemssubModel = new ItemsubModel;
         $ItemsupModel = new ItemupModel;
+        $EvntModel = new EventsModel;
+        $EvntCateModel = new EventscateModel;
+        $EvntTypeModel = new EventstypeModel;
 
         $data = [
             'pdf' => $ItemsupModel->RowTypeFile(1,'Upload'),
@@ -45,6 +51,7 @@ class AdminController extends Controller
             'areas' => $areasModel->where('area_code', session()->get('area_code'))->first(),
             'schools' => $schoolsModel->where('sch_code', session()->get('sch_code') )->first(),
             'itemall' => $ItemsModel->getItemAllByMainBySub(),
+            "evntcate" => $EvntCateModel->orderBy('id')->findAll(),
             'title' => [
                 '1' => 'Dashboard',
                 '2' => '',
@@ -304,6 +311,9 @@ class AdminController extends Controller
             'title' => [
                 '1' => 'ข้อมูลส่วนตัว'
             ],
+            'url' => [
+                '1' => base_url(session()->get('role') . '/profile'),
+            ]
         ];
 
         echo view('templates/' . session()->get('role') . '/header', $data);
@@ -372,7 +382,16 @@ class AdminController extends Controller
         } else {
             helper(['form']);
             $userModel = new UsersModel;
-            $data['profile'] = $userModel->where('ID', session()->get('id'))->first();
+            //$data['profile'] = $userModel->where('ID', session()->get('id'))->first();
+            $data = [
+                'profile' => $userModel->where('ID', session()->get('id'))->first(),
+                'title' => [
+                    '1' => 'แก้ไขข้อมูลส่วนตัว'
+                ],
+                'url' => [
+                    '1' => base_url(session()->get('role') . '/profile'),
+                ]
+            ];
             $data['validation'] = $this->validator;
             echo view('templates/admin/header', $data);
             echo view('templates/admin/sidebar', $data);
@@ -395,6 +414,9 @@ class AdminController extends Controller
             'title' => [
                 '1' => 'เปลี่ยนรหัสผ่าน'
             ],
+            'url' => [
+                '1' => base_url(session()->get('role') . '/changePassword'),
+            ]
         ];
 
         echo view('templates/' . session()->get('role') . '/header', $data);
@@ -461,6 +483,9 @@ class AdminController extends Controller
                 'title' => [
                     '1' => 'เปลี่ยนรหัสผ่าน'
                 ],
+                'url' => [
+                    '1' => base_url(session()->get('role') . '/changePassword'),
+                ]
             ];
 
             echo view('templates/' . session()->get('role') . '/header', $data);
